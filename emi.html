@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+
+<head>
+   <script>
+      function sa() {
+         var amount = prompt("Please enter The net amount of The product");
+
+
+         var paid = prompt("Please enter The amount you paid on it");
+         var month = prompt("Please enter The number of months you want to pay emi");
+         var intrest = prompt("Please enter the intrest");
+
+         var bala = amount - paid;
+         var intr = (bala / 100) * intrest;
+         var balance = bala + intr;
+         var emi = balance / month;
+
+
+         document.write("The total is:" + " " + amount);
+         document.write("<br>");
+         document.write("<br>");
+
+         document.writeln("The amount paid is:" + " " + paid);
+         document.write("<br>");
+         document.write("<br>");
+
+         document.write("The balance is:" + " " + bala);
+         document.write("<br>");
+         document.write("<br>");
+
+         document.write("The intrest is:" + " " + intr);
+         document.write("<br>");
+         document.write("<br>");
+
+
+         document.write("The emi is:" + " " + emi);
+
+      }
+
+      sa();
+   </script>
+</head>
+
+<body>
+</body>
+
+</html>

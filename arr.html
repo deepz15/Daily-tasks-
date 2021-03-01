@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <input type="text" id="bo">
+  <button onclick="sumof()" id="butt">Add</button>
+
+  <script>
+    function sumof() {
+
+      var a = document.getElementById("bo").value;
+      var arr = a.split(",");
+      var sum = arr.reduce(function (a, b) {
+        let q = parseInt(a);
+        let r = parseInt(b);
+        var g = q + r;
+        document.write(g);
+
+
+      });
+
+    }
+  </script>
+
+</body>
+
+</html>

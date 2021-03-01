@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Create a table</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+
+        #myTable {
+            border-color: tomato;
+            margin: 3;
+            flex-grow: -1;
+
+        }
+
+        #butt {
+            font-size: 20px;
+            margin-top: 20px;
+            background-color: rgb(143, 241, 77);
+            border-radius: 50%;
+            height: inherit;
+            align-content: center;
+            flex-grow: -1;
+            height: 30%;
+            width: 30%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #rr {
+            height: 40px;
+            width: 300px;
+            border-color: slateblue;
+            flex-grow: -1;
+
+
+        }
+
+        #cc {
+            height: 40px;
+            width: 300px;
+            border-color: rgb(221, 235, 32);
+            flex-grow: -1;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" id="rr">
+    <br>
+    <input type="number" id="cc">
+    <br>
+
+    <table id="myTable" border="5">
+    </table>
+
+    <input type="button" id="butt" onclick="createTable()" value="Create">
+
+    <script>
+        function createTable() {
+            rn = document.getElementById("rr").value;
+            cn = document.getElementById("cc").value;
+
+            for (var r = 0; r < parseInt(rn); r++) {
+                var x = document.getElementById('myTable').insertRow(r);
+                for (var c = 0; c < parseInt(cn); c++) {
+                    var y = x.insertCell(c);
+                    y.innerHTML = "R-" + r + " C-" + c;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

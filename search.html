@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Auto complete using Pure Javascript</title>
+</head>
+
+<body>
+    <script>
+        var tags = [
+            "Deepan",
+            "Saifullah",
+            "Abdhul edit",
+            "vicky",
+            "Absar vedi muthu",
+            "Thalabathi hakim",
+            " abi shakeuhhh",
+            " karthik uhhh",
+
+        ];
+
+        var n = tags.length;
+
+        function ac(value) {
+            document.getElementById('datalist').innerHTML = '';
+
+            l = value.length;
+
+            for (var i = 0; i < n; i++) {
+                if (((tags[i].toLowerCase()).indexOf(value.toLowerCase())) > -1) {
+
+                    var node = document.createElement("option");
+                    var val = document.createTextNode(tags[i]);
+                    node.appendChild(val);
+
+                    document.getElementById("datalist").appendChild(node);
+                }
+            }
+        }
+    </script>
+
+    <input type="text" list="datalist" onkeyup="ac(this.value)">
+
+    <datalist id="datalist">
+
+        <option value="Deepan"></option>
+        <option value="Saifullah"></option>
+        <option value="Abdhul edit"></option>
+        <option value="vicky"></option>
+        <option value="Absar vedi muthu"></option>
+        <option value="Thalabathi hakim"></option>
+        <option value="abi shakeuhhh"></option>
+        <option value="karthik uhh"></option>
+
+
+    </datalist>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<html>
+
+<head>
+  <title>Battery persentage</title>
+</head>
+
+<body>
+  <script>
+    navigator.getBattery().then(function (battery) {
+
+      var level = battery.level * 100 + "%";
+
+      document.write(level);
+    });
+  </script>
+</body>
+
+</html>

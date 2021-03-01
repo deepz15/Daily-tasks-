@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <style>
+    #step {
+      border: 2px solid;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" id="inp">
+  <button onclick="build()">build</button>
+  <div id="step">
+  </div>
+
+  <script>
+    function build() {
+      var a = Number(document.getElementById("inp").value);
+      var width = 100;
+      for (i = 0; i <= a; i++) {
+        b = document.createElement("div");
+        b.style.width = width + "px";
+        width = width + 100;
+        b.style.height = "100px";
+        b.style.backgroundColor = "black";
+        document.getElementById("step").appendChild(b);
+      }
+    }
+  </script>
+</body>
+
+</html>

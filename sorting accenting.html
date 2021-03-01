@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <tittle>sorting the given number in accenting order</tittle>
+</head>
+
+<body>
+    <button onclick="fn()">sort</button>
+    <script>
+        var num = [80, 100, 50, 20, 30];
+
+        function fn() {
+            num.sort(function (a, b) {
+                return a - b
+            });
+            document.write(num);
+        }
+    </script>
+</body>
+
+</html>
